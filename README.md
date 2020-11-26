@@ -6,7 +6,7 @@
 
 # What I've Learned So Far
 
-- ✅ Enabling flex and determining its flex directions.
+- ✅ Enabling flex and determining its flex direction.
     -    
     ```css
         header {
@@ -39,7 +39,7 @@
 - ✅ Flex sizing properties
     -
     ```css
-        div{
+        div {
             flex-basis: 400px;
             flex-grow: 2;
             flex-shrink: 1;
