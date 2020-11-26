@@ -6,7 +6,7 @@
 
 # What I've Learned So Far
 
-- [x] Enabling flex and determining its flex directions.
+- ✅ Enabling flex and determining its flex directions.
     -    
     ```css
         header {
@@ -15,11 +15,36 @@
         }
     ```
     
-- [x] justify-content and align-items
+- ✅ Justify-content and align-items
     -
     ```css
-        div {
+        header {
             justify-content: flex-start;
             align-items: center;
         }
+    ```
+
+- ✅ Align-self and flex-wrap
+    -
+    ```css
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        div {
+           align-self: center; 
+        }
+    ```
+- ✅ Flex sizing properties
+    -
+    ```css
+        div{
+            flex-basis: 400px;
+            flex-grow: 2;
+            flex-shrink: 1;
+
+            /*or using the shorthand method*/
+            flex: 2 1 400px;
+        } 
     ```
