@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #534e52; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #222831; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ace070; 
+  }
+
+
 * {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
