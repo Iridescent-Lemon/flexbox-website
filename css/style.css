@@ -39,6 +39,46 @@ body {
   line-height: 1.4;
 }
 
+/* Utility Clases */
+.text-primary {
+  color: #5cb620;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.py-1 { padding: 1.5rem 0;}
+.py-2 { padding: 2rem 0;}
+.py-3 { padding: 3rem 0;}
+
+.p-1 { padding: 1.5rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 3rem;}
+
+.l-heading {
+  line-height: 1.1;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.m-heading {
+  line-height: 1.1;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
 /* Navbar Start*/
 
 #navbar {
@@ -100,7 +140,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   height: 100%;
   padding: 0 2rem;
   /* Overlay */
@@ -113,19 +152,16 @@ body {
   overflow: hidden;
 }
 
-.landing-heading {
+#landing-cover .landing-heading {
   margin: 0 10rem 0.75rem; /*To be change in mobile*/
-  line-height: 1.1;
-  font-size: 3rem;
-  font-weight: 700;
 }
 
-.landing-desc {
+#landing-cover .landing-desc {
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
-.btn {
+#landing-cover .btn {
   font-weight: 300;
   display: inline-block;
   background-color: #5cb620;
@@ -138,7 +174,7 @@ body {
   transition-property: background-color;
 }
 
-.btn:hover {
+#landing-cover .btn:hover {
   background-color: #8bad4b;
   border: 2px solid wheat;
 }
@@ -148,7 +184,7 @@ body {
 
 /* About Start */
 
-.container {
+#about .container {
   max-width: 1100px;
   margin:auto;
   padding:0 2rem;
@@ -157,38 +193,63 @@ body {
   flex-direction: column;
 }
 
-.py-1 { padding: 1.5rem 0;}
-.py-2 { padding: 2rem 0;}
-.py-3 { padding: 3rem 0;}
-
-.about-heading {
-  font-size: 2rem;
-  font-weight: 700;
+#about .about-heading {
   margin-bottom: 0.75rem;
-  line-height: 1.1;
-  text-align: center;
 }
 
-.items {
+#about .items {
   display:flex;
   padding: 1rem;
 }
 
-.item {
+#about .item {
   flex: 1;
   text-align: center;
   padding: 1rem;
 }
 
-.items h3 {
+#about .items h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.fa-2x {
+#about .fa-2x {
   font-size: 4rem;
   background-color: #7dd642;
   border-radius: 50%;
   padding: 1.5rem;
   margin-bottom: 1rem;
+}
+
+/* About End */
+
+
+/* Company Start */
+
+#company {
+  display: flex;
+  height: 60vh;
+}
+
+#company div {
+  flex: 1;
+}
+
+.company-img {
+  background: #444 url('../img/power.jpg') no-repeat center center/cover;
+}
+
+/* Company End */
+
+
+/* Partners Start */
+
+#partners .partner-logo {
+  display: flex;
+}
+
+#partners .partner-logo img{
+  display: block;
+  margin: auto;
+  width: 60%;
 }
