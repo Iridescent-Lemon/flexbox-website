@@ -56,6 +56,12 @@ body {
 .bg-dark {
   background-color: #333;
   color: #f4f4f4;
+  border: none;
+}
+
+.bg-primary {
+  background: #88bd4c;
+  color: white;
 }
 
 .py-1 { padding: 1.5rem 0;}
@@ -78,6 +84,23 @@ body {
   font-weight: 700;
 }
 
+.btn-primary {
+  font-weight: 300;
+  display: inline-block;
+  background-color: #5cb620;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.1s ease-in;
+  transition-property: background-color;
+}
+
+.btn-primary:hover {
+  background-color: #8bad4b;
+  border: 2px solid wheat;
+}
 
 /* Navbar Start*/
 
@@ -106,21 +129,21 @@ body {
   color: #ace070;
 }
 
-#navbar ul {
+#navbar .nav-items {
   display: flex;
+  background-clip: border-box;
 }
 
-#navbar li {
+#navbar li a {
   letter-spacing: 1.5px;
-  padding: 0.75rem;
+  padding: 0.9rem;
   margin: 0 0.25rem;
   transition: all 0.1s ease-in;
   transition-property: background-color;
 }
 
-#navbar li:hover {
+#navbar li a:hover {
   background-color: #ace070;
-  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -159,24 +182,6 @@ body {
 #landing-cover .landing-desc {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-}
-
-#landing-cover .btn {
-  font-weight: 300;
-  display: inline-block;
-  background-color: #5cb620;
-  padding: 0.5rem 2rem;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.1s ease-in;
-  border: 2px solid transparent;
-  transition-property: background-color;
-}
-
-#landing-cover .btn:hover {
-  background-color: #8bad4b;
-  border: 2px solid wheat;
 }
 
 /* Header End */
@@ -253,3 +258,26 @@ body {
   margin: auto;
   width: 60%;
 }
+
+/* Partners End */
+
+/* Contact Start */
+#contact {
+  display: flex;
+}
+
+#contact .contact-form, #contact .location-map {
+  flex: 1;
+}
+
+#contact .contact-form label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#contact .contact-form input, 
+#contact .contact-form textarea {
+ width: 100%;
+ padding: 0.75rem;
+} 

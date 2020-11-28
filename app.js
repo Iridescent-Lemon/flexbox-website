@@ -1,21 +1,22 @@
+require('dotenv').config();
+const express = require('express');
+const app = express();
 
+app.use(express.json());
 
-const locationMap = document.querySelector('.location-map');
+app.use(express.static(__dirname + '/../public'));
 
-
-async function mapToken() {
-const getToken = await fetch();
-const token = getToken.json();
-
-}
-
-
-
-// add something that will fetch the api_key from the backend
-mapboxgl.accessToken = mapToken();
-var map = new mapboxgl.Map({
-    container: locationMap,
-    style: 'mapbox://styles/lemonplug/ckenng4qa0bsl1anzmux3hh43', // stylesheet location
-    center: [120.3136, 14.6297], // starting position [lng, lat]
-    zoom: 15 // starting zoom
+app.get('/',(req, res)=>{
+    res.json('Hello!');
 });
+
+app.get('/token', (req, res)=>{
+    res.json({
+        message: process.env.API_KEY,
+    })
+})
+
+
+app.listen(3000, ()=>{
+    console.log('Server running on PORT 3000');
+})
