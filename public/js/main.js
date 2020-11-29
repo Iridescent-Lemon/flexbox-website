@@ -3,19 +3,28 @@ const navItems = document.querySelectorAll('.nav-items li');
 const navbar = document.getElementById('navbar');
 
 // get navbar height
-const navHeight = navbar.getBoundingClientRect().height;
+let navHeight = navbar.getBoundingClientRect().height;
+
+// responsive navbar sizing
+window.addEventListener('resize', () => {
+    navHeight = navbar.getBoundingClientRect().height;
+    ScrollView();
+});
 
 // Scroll into View when clicked
-navItems.forEach(item => {
-    let idTag = document.getElementById(`${item.textContent.toLowerCase()}`);
-    item.addEventListener('click', () => {
-        window.scroll({
-            top: (idTag.offsetTop - navHeight),
-            left: 0, 
-            behavior: 'smooth'
-        });
-    })
-});
+function ScrollView() {
+    navItems.forEach(item => {
+        let idTag = document.getElementById(`${item.textContent.toLowerCase()}`);
+        item.addEventListener('click', () => {
+            window.scroll({
+                top: (idTag.offsetTop - navHeight),
+                left: 0,
+                behavior: 'smooth'
+            });
+        })
+    });
+}
+ScrollView();
 
 // Styling while scrolled
 window.addEventListener('scroll', () => {
@@ -40,8 +49,13 @@ async function mapToken() {
             zoom: 15 // starting zoom
         });
 
+        var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+            'Bataan Nuclear Power Plant is a nuclear power plant, on Bataan Peninsula, 100 kilometres (62 mi) west of Manila in the Philippines. It is located on a 3.57 square kilometre government reservation at Napot Point in Morong, Bataan.'
+        );
+
         var marker = new mapboxgl.Marker()
             .setLngLat([120.3136, 14.6297])
+            .setPopup(popup)
             .addTo(map);
 
     } catch (err) {
