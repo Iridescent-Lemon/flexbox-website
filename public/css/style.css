@@ -118,6 +118,7 @@ a {
   padding: 1rem;
   z-index: 1;
   transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 #navbar h1 {
@@ -136,7 +137,7 @@ a {
   background-clip: border-box;
 }
 
-#navbar li a {
+#navbar li {
   letter-spacing: 1.5px;
   padding: 0.9rem;
   margin: 0 0.25rem;
@@ -144,7 +145,7 @@ a {
   transition-property: background-color;
 }
 
-#navbar li a:hover {
+#navbar li:hover {
   background-color: #ace070;
   cursor: pointer;
 }
