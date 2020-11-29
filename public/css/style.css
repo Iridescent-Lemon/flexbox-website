@@ -65,6 +65,12 @@ a {
   color: white;
 }
 
+.bg-nav {
+  background-color: #222831;
+  color: white;
+}
+
+.py-mini {padding: 1rem 0;}
 .py-1 { padding: 1.5rem 0;}
 .py-2 { padding: 2rem 0;}
 .py-3 { padding: 3rem 0;}
@@ -110,7 +116,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 7.5vh;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -134,7 +140,6 @@ a {
 
 #navbar .nav-items {
   display: flex;
-  background-clip: border-box;
 }
 
 #navbar li {
@@ -251,6 +256,13 @@ a {
 
 
 /* Partners Start */
+#partners .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
 
 #partners .partner-logo {
   display: flex;
@@ -269,8 +281,12 @@ a {
   display: flex;
 }
 
-#contact .contact-form, #contact .location-map {
+#contact .contact-form, #contact .map {
   flex: 1;
+}
+
+#contact p {
+  margin: 1rem 0;
 }
 
 #contact .contact-form label {
@@ -282,14 +298,19 @@ a {
 #contact .contact-form input, 
 #contact .contact-form textarea {
  width: 100%;
- padding: 0.75rem;
+ padding: 0.65rem;
+ resize: none;
 } 
 
-.bg-nav {
-  background-color: #222831;
-  color: white;
+#contact .map {
+  display: block;
 }
 
+.mapboxgl-marker {
+cursor: pointer;
+}
+
+/* Toggle Classes */
 .scrolled {
 background-color: #22283171;
 }
