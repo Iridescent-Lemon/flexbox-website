@@ -106,8 +106,10 @@ a {
 /* Navbar Start*/
 
 #navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   height: 7.5vh;
   display: flex;
   flex-direction: row;
@@ -167,12 +169,12 @@ a {
   padding: 0 2rem;
   /* Overlay */
   position: absolute;
-  top: 7.5vh;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 #landing-cover .landing-heading {
