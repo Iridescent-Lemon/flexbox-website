@@ -1,4 +1,4 @@
-const locationMap = document.querySelector('.location-map');
+const locationMap = document.querySelector('.map');
 const navItems = document.querySelectorAll('.nav-items li');
 const navbar = document.getElementById('navbar');
 
