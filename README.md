@@ -1,6 +1,8 @@
 # Website using Flexbox 
 
-## A site created to demonstrate the features of flexbox. Currently in development.
+## A simple [website](https://iridescent-lemon.github.io/flexbox-website) created to demonstrate some of the features of flexbox. Currently in development.
+
+### [Click Here for Live Preview](https://iridescent-lemon.github.io/flexbox-website)
 
 <br>
 
