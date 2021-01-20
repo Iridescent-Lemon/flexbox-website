@@ -48,3 +48,5 @@
             flex: 2 1 400px;
         } 
     ```
+
+- ✅ Justify Content and Flex shorthand.

@@ -38,10 +38,7 @@ window.addEventListener('scroll', () => {
 // Map fetch and render
 async function mapToken() {
     try {
-        const response = await fetch('http://localhost:3000/token');
-        const data = await response.json();
-
-        mapboxgl.accessToken = data.message;
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGVtb25wbHVnIiwiYSI6ImNrZW12ajdhYjBjeXoycW5xYmpkOW91YzYifQ.T-5jg37zN8QSAsxoNTezCw';
         var map = new mapboxgl.Map({
             container: locationMap,
             style: 'mapbox://styles/lemonplug/ckenng4qa0bsl1anzmux3hh43', // stylesheet location
